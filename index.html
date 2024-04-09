@@ -23,13 +23,16 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="about.html">About Us</a>
+                        <a class="nav-link" href="#about">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#book">Book Now</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="services.html">Services</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="contact.html">Contact</a>
+                        <a class="nav-link" href="#contact">Contact</a>
                     </li>
                 </ul>
             </div>
@@ -41,6 +44,24 @@
         
     </section>
 
+    <section class="container my-4" id="about">
+        <!-- Izys section -->
+        <div class="col">
+            <div class="row">
+                <div class="col-lg-6">
+                    <h2>About Us</h2>
+                    <p>At Dos Manos, we are a team of professional photographers who are passionate about capturing the
+                        beauty of the world around us. We specialize in a wide range of photography services, including
+                        portrait photography, event photography, and commercial photography. Our goal is to provide our
+                        clients with high-quality images that they can cherish for a lifetime.</p>
+                </div>
+                <div class="col-lg-6">
+                    <img src="assets/20220512_171757.jpg" class="img-fluid" alt="Photographer">
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Embed calendly for scheduling-->
     <section class="container-fluid" id="book">
         <div 
@@ -48,6 +69,40 @@
             data-url="https://calendly.com/ethandavid111" 
             style="min-width:320px;height:700px;"
             >
+        </div>
+    </section>
+
+    <!-- Contact us section -->
+    <section class="container my-5" id="contact">
+        <div class="row">
+            <div class="col-lg-6">
+                <h2>Contact Us</h2>
+                <p>Fill out the form below to get in touch with us.</p>
+                <form action="contact.php" method="post">
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Name</label>
+                        <input type="text" class="form-control" id="name" name="name" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="email" name="email" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="message" class="form-label">Message</label>
+                        <textarea class="form-control" id="message" name="message" rows="3" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+            </div>
+            <div class="col-lg-6">
+                <h2>Our Location</h2>
+                <p>Visit us at our office located at:</p>
+                <address>
+                    123 Main St<br>
+                    New York, NY 10001
+                </address>
+                <p>Email us at <a href="tel:123-456-7890">123-456-7890</a></p>
+            </div>
         </div>
     </section>
 
