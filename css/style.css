@@ -36,7 +36,7 @@ section {
 .gallery-row {
     display: flex;
     flex-wrap: wrap;
-    width: 100%;
+    width: 80%;
 }
 
 .gallery-row .gallery-col {
@@ -59,6 +59,12 @@ section {
 
 .gallery-row .gallery-col img:hover {
     filter: grayscale(0) brightness(1);
+}
+
+#gallery {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 }
 
 /* MAKE IT RESPONSIVE */
