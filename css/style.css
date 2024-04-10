@@ -82,6 +82,10 @@ section {
     .gallery-row .gallery-col {
         flex: 50%;
     }
+
+    .c-media {
+        height: 50vh;
+    }
 }
 
 @media only screen and (max-width: 600px) {
