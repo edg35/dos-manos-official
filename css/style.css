@@ -57,6 +57,42 @@ section {
     background-color: #fff;
 }
 
+.modal {
+    display: none;
+    /* Initially hidden */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    padding-top: 100px;
+    /* Location of box content */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/ opacity */
+}
+
+.img-zoom {
+    max-width: 80%;
+    /* Max image width */
+    max-height: 80%;
+    /* Max image height */
+    margin: auto;
+    display: block;
+    object-fit: contain;
+    /* Scale to fit container */
+}
+
+.modal.active {
+    backdrop-filter: blur(20px);
+    /* Adjust blur amount as needed */
+}
 
 .gallery-row {
     display: flex;
