@@ -208,6 +208,49 @@
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
     <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js"></script>
+
+    <!-- Contact form error handling -->
+    <script type="text/javascript">
+        const form = document.getElementById("contact").querySelector("form"); // Select the form
+
+        form.addEventListener("submit", (event) => { // Add event listener for submit
+            const nameInput = document.getElementById("name");
+            const emailInput = document.getElementById("email");
+            const messageInput = document.getElementById("message");
+
+            let hasError = false; // Flag to track errors
+
+            // Validate name (check for empty string)
+            if (nameInput.value.trim() === "") {
+                nameInput.classList.add("border-danger"); // Add red border class
+                hasError = true;
+            } else {
+                nameInput.classList.remove("border-danger"); // Remove red border if valid
+            }
+
+            // Validate email (check for valid email format)
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(emailInput.value)) {
+                emailInput.classList.add("border-danger");
+                hasError = true;
+            } else {
+                emailInput.classList.remove("border-danger");
+            }
+
+            // Validate message (check for empty string)
+            if (messageInput.value.trim() === "") {
+                messageInput.classList.add("border-danger");
+                hasError = true;
+            } else {
+                messageInput.classList.remove("border-danger");
+            }
+
+            // Prevent form submission if there's an error
+            if (hasError) {
+                event.preventDefault();
+            }
+        });
+    </script>
 </body>
 
 </html>
