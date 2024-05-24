@@ -111,6 +111,7 @@
             // Close modal on click outside the image or on Escape key press
             window.onclick = function (event) {
                 if (event.target == modal || event.key == "Escape") {
+                    document.body.style.overflow = "auto"; // Enable scrolling
                     modal.style.display = "none";
                     modal.classList.remove("active");
                     modal.removeChild(imgClone); // Remove the cloned image
